@@ -1,0 +1,7 @@
+#Header {
+  background: var(--redbus-red);
+}
+
+#Header .level-area {
+  float: right;
+}

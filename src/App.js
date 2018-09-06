@@ -14,6 +14,7 @@ class App extends Component {
         avatar: 'avatar.png',
         username: 'Luis Ruiz',
         progress: 70,
+        level: 4,
       },
     };
 

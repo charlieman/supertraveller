@@ -1,3 +1,7 @@
+:root {
+  --redbus-red:#db4949;
+}
+
 body {
   margin: 0;
   padding: 0;
