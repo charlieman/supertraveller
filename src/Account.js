@@ -5,7 +5,7 @@ export default class Account extends Component {
     return (
       <div id="account">
         <ul>
-          <li className="profile"><img src={this.props.account.avatar}/> Hi! <br/> {this.props.account.username}</li>
+          <li className="profile"><img src={this.props.account.avatar} alt=""/> Hi! <br/> {this.props.account.username}</li>
           <li onClick={() => this.props.go('trips')}>My Trips</li>
           <li onClick={() => this.props.go('coupons')}>My Coupons</li>
           <li onClick={() => this.props.go('offers')}>Offers</li>

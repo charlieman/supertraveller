@@ -13,6 +13,7 @@ class App extends Component {
       account: {
         avatar: 'avatar.png',
         username: 'Luis Ruiz',
+        progress: 70,
       },
     };
 
@@ -42,7 +43,7 @@ class App extends Component {
       case 'account':
         return (<Account account={this.state.account}/>);
       case 'play':
-        return (<Play/>);
+        return (<Play account={this.state.account}/>);
       case 'help':
         return (<div>help</div>);
       default:
