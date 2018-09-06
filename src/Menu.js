@@ -4,11 +4,11 @@ export default class Menu extends Component {
     render() {
         return (
             <ul className="menu">
-                <li>Home</li>
-                <li>My Trips</li>
-                <li>My Account</li>
-                <li>Play</li>
-                <li>Help</li>
+                <li onClick={() => this.props.go('home')}>Home</li>
+                <li onClick={() => this.props.go('trips')}>My Trips</li>
+                <li onClick={() => this.props.go('account')}>My Account</li>
+                <li onClick={() => this.props.go('play')}>Play</li>
+                <li onClick={() => this.props.go('help')}>Help</li>
             </ul>
         );
     }
