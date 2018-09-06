@@ -4,6 +4,7 @@ import Menu from './Menu';
 import Home from './Home';
 import Account from './Account';
 import Play from './Play';
+import CitySelector from "./CitySelector";
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class App extends Component {
         avatar: 'avatar.png',
         username: 'Luis Ruiz',
         progress: 70,
-        lives: 3,
+        lives: 2,
         experience: 0,
       },
     };
@@ -47,9 +48,11 @@ class App extends Component {
       case 'account':
         return (<Account account={this.state.account}/>);
       case 'play':
-        return (<Play account={this.state.account}/>);
+        return (<Play account={this.state.account} go={this.go}/>);
       case 'help':
         return (<div>help</div>);
+      case 'city-selection':
+        return (<CitySelector account={this.state.account} />);
       default:
         console.log(viewName);
         return null;

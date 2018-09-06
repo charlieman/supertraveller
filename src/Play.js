@@ -4,11 +4,11 @@ import Header from './Header';
 export default class Play extends Component {
   render() {
     return (
-      <div>
+      <div id="Play">
         <Header account={this.props.account}/>
-        <ul id="play">
-          <li>Play Now</li>
-          <li>My Ranking</li>
+        <ul>
+          <li><button onClick={() => this.props.go('city-selection')}>Play Now</button></li>
+          <li><button onClick={() => this.props.go('ranking')}>My Ranking</button></li>
         </ul>
       </div>
     )
