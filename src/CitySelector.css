@@ -1,3 +1,6 @@
+#CitySelector {
+  text-align: center;
+}
 #CitySelector li {
   list-style: none;
   display: inline-block;
@@ -35,4 +38,14 @@
   width: 100px;
   height: 40px;
   margin: 5px;
+}
+
+#CitySelector .cities button.selected {
+  background: red;
+}
+
+#CitySelector .playButton {
+  font-size: 1.6em;
+  padding: 15px;
+  margin: 20px;
 }
