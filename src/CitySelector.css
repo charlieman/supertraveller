@@ -8,11 +8,20 @@
   padding: 0;
 }
 
-#CitySelector p {
+#CitySelector .question {
   padding: 20px;
   text-align: center;
   font-size: 2em;
 }
+
+#CitySelector .description {
+  display: block;
+  border: 1px solid #343434;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+}
+
 #CitySelector .cities {
   display: grid;
   grid-template-columns: auto auto auto;
