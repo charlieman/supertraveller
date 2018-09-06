@@ -3,6 +3,7 @@ import './App.css';
 import Menu from './Menu';
 import Home from './Home';
 import Account from './Account';
+import Play from './Play';
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class App extends Component {
       case 'account':
         return (<Account account={this.state.account}/>);
       case 'play':
-        return (<div>play</div>);
+        return (<Play/>);
       case 'help':
         return (<div>help</div>);
       default:
