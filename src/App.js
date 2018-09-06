@@ -14,7 +14,8 @@ class App extends Component {
         avatar: 'avatar.png',
         username: 'Luis Ruiz',
         progress: 70,
-        level: 4,
+        lives: 3,
+        experience: 0,
       },
     };
 
@@ -50,6 +51,7 @@ class App extends Component {
       case 'help':
         return (<div>help</div>);
       default:
+        console.log(viewName);
         return null;
     }
   }
