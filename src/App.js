@@ -23,8 +23,10 @@ class App extends Component {
   render() {
     const view = this.getView(this.state.view);
     return (
-      <div className="App">
-        {view}
+      <div id="App">
+        <div className="view">
+          {view}
+        </div>
         <Menu go={this.go}/>
       </div>
     );
