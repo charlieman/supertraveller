@@ -20,18 +20,21 @@ class App extends Component {
         lives: 2,
         experience: 0,
         stages: {
-          ica: {stage: 0}
+          Ica: {stage: 0}
         },
       },
-      stages: questions,
+      questions: questions,
       settings: {
         questions: 2,
-      }
+        cooldown: 120, // how much time to wait before coupon is available again in hours
+        discount: 50, // discount percentage
+      },
+      selectedStage: null,
     };
 
     this.go = this.go.bind(this);
     this.play = this.play.bind(this);
-    window.s = this.state;
+    window.getState = () => this.state;
   }
 
   render() {
@@ -47,13 +50,25 @@ class App extends Component {
   }
 
   go(view) {
-    this.setState({view});
+    this.setState({view, selectedStage: null});
+  }
+
+  selectStage(city) {
+    const quiz = this.state.questions[city];
+    let userStage = this.state.account.stages[city];
+    if (quiz === undefined) {
+      return null
+    }
+    if (userStage === undefined) {
+      userStage = {stage: 0};
+    }
+    return quiz.stages[userStage.stage];
   }
 
   play(city) {
-    console.log(arguments);
-    const stage = this.state.stages[city];
-    return <Stage stage={stage} account={this.state.account}/>;
+    console.log(city);
+    const selectedStage = this.selectStage(city);
+    this.setState({selectedStage, view: 'stage'});
   }
 
   getView(viewName) {
@@ -70,6 +85,9 @@ class App extends Component {
         return (<div>help</div>);
       case 'city-selection':
         return (<CitySelector account={this.state.account} play={this.play}/>);
+      case 'stage':
+        return (
+          <Stage questions={this.state.selectedStage} account={this.state.account} settings={this.state.account}/>);
       default:
         console.log(viewName);
         return null;
