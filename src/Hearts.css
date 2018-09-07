@@ -1,0 +1,9 @@
+#Hearts {
+  margin: 2px;
+  padding: 0;
+}
+
+#Hearts li {
+  list-style: none;
+  display: inline-block;
+}

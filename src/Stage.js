@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import './Stage.css';
 import Header from "./Header";
+import Hearts from "./Hearts";
 
 export default class Stage extends Component {
 
@@ -67,6 +68,7 @@ export default class Stage extends Component {
     return (
       <div id="Stage">
         <Header account={this.props.account}/>
+        <Hearts account={this.props.account}/>
         <div className="playArea">
           <h1>{this.props.data.stageName}</h1>
           <p className="question">{question.question}</p>
@@ -94,8 +96,7 @@ export default class Stage extends Component {
       this.setState({message: "You made it!", points});
 
       if (points >= this.props.settings.numberOfWins) {
-        this.props.addExperience(this.props.data.experience);
-        this.props.winPiece();
+        this.props.winPiece(this.props.data.experience);
         return;
       }
     } else {

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Header';
-
+import Hearts from "./Hearts";
 import './CitySelector.css';
+
 
 export default class CitySelector extends Component {
   constructor(props) {
@@ -12,35 +13,25 @@ export default class CitySelector extends Component {
     }
   }
 
-  static alive() {
-    return (<img src="img/heart-full.png" height="20" alt="life"/>);
-  }
-
-  static dead() {
-    return (<img src="img/heart-empty.png" height="20" alt="life"/>);
-  }
-
   button(cityName) {
+    const enabled = this.props.account.lives > 0;
     return <button className={this.state.city === cityName ? 'selected' : ''}
+                   disabled={!enabled}
                    onClick={() => this.select(cityName)}>{cityName}</button>;
   }
 
   render() {
-    const lives = this.props.account.lives;
     return (
       <div id="CitySelector">
         <Header account={this.props.account}/>
-        <ul className="lives">
-          <li>{lives > 0 ? CitySelector.alive() : CitySelector.dead()}</li>
-          <li>{lives > 1 ? CitySelector.alive() : CitySelector.dead()}</li>
-          <li>{lives > 2 ? CitySelector.alive() : CitySelector.dead()}</li>
-        </ul>
+        <Hearts account={this.props.account}/>
         <p className="question">How much do you know about Peru? Play and win!</p>
         <p className="description" style={{visibility: this.state.showAbout ? 'visible' : 'hidden'}}>
           Next you are going to solve some questions about {this.state.city}. You have 10 seconds to answer each
           question.<br/>
           Go!
         </p>
+        {this.props.account.lives <= 0? <p className="description">Play again tomorrow</p> : ""}
         <div className="cities">
           {this.button('Ica')}
           {this.button('Trujillo')}
@@ -52,7 +43,7 @@ export default class CitySelector extends Component {
         <div className="playArea">
           {this.state.city !== null ? <button className="playButton" onClick={() => this.props.play(this.state.city)}>
             Play Now<br/>
-            <small>Stage 1 / 3</small>
+            <small>-</small>
           </button> : ''}
         </div>
       </div>

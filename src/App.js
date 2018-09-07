@@ -20,11 +20,11 @@ class App extends Component {
         lives: 2,
         experience: 0,
         stages: {
-          Cusco: {stage: 1},
+          Cusco: {stage: 0},
         },
         puzzles: {
           Cusco: {
-            quiz: [true, false, false],
+            quiz: [false, false, false],
             share: [false, false],
             trip: false,
           },
@@ -81,14 +81,15 @@ class App extends Component {
 
   selectStage(city) {
     const quiz = this.state.questions[city];
-    let userStage = this.state.account.stages[city];
     if (quiz === undefined) {
       return null;
     }
-    if (userStage === undefined) {
-      userStage = {stage: 0};
+    const puzzle = this.state.account.puzzles[city];
+    const stage = puzzle.quiz.indexOf(false);
+    if (stage === -1) {
+      return 0
     }
-    return userStage.stage;
+    return stage;
   }
 
   play(city) {
@@ -102,21 +103,17 @@ class App extends Component {
   }
 
   addExperience(points) {
-    console.log('addExperience', points);
-    const account = {
-      ...this.state.account,
-      experience: this.state.account.experience + points
-    };
-    this.setState({account});
   }
 
-  winPiece() {
+  winPiece(experience) {
+    console.log('addExperience', experience);
     const stage = this.state.selectedStage;
     const city = this.state.selectedCity;
     const puzzle = this.state.account.puzzles[city];
     puzzle.quiz[stage] = true;
     const account = {
       ...this.state.account,
+      experience: this.state.account.experience + experience,
       stages: {
         ...this.state.account.stages,
         [city]: stage + 1,
@@ -159,7 +156,7 @@ class App extends Component {
         const city = this.state.selectedCity;
         const quiz = this.state.questions[city];
         const stageData = quiz.stages[this.state.selectedStage];
-        console.log(stageData);
+        console.log(city, quiz, stageData, this.state.selectedStage);
         return (
           <Stage data={stageData}
                  account={this.state.account}
