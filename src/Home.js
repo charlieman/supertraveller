@@ -3,9 +3,8 @@ import React, {Component} from 'react';
 export default class Home extends Component {
   render() {
     return (
-      <div id="home">
-        from:
-        to:
+      <div id="Home">
+        <img src="/img/screenshot.jpg"/>
       </div>
     )
   }
