@@ -25,7 +25,7 @@ class App extends Component {
       },
       questions: questions,
       settings: {
-        questions: 2,
+        numberOfQuestions: 2, // questions asked per stage
         cooldown: 120, // how much time to wait before coupon is available again in hours
         discount: 50, // discount percentage
       },
@@ -66,7 +66,6 @@ class App extends Component {
   }
 
   play(city) {
-    console.log(city);
     const selectedStage = this.selectStage(city);
     this.setState({selectedStage, view: 'stage'});
   }
@@ -87,7 +86,7 @@ class App extends Component {
         return (<CitySelector account={this.state.account} play={this.play}/>);
       case 'stage':
         return (
-          <Stage questions={this.state.selectedStage} account={this.state.account} settings={this.state.account}/>);
+          <Stage data={this.state.selectedStage} account={this.state.account} settings={this.state.settings}/>);
       default:
         console.log(viewName);
         return null;

@@ -1,0 +1,13 @@
+#Stage {
+  padding: 0 20px;
+}
+
+#Stage h1 {
+  text-align: center;
+}
+
+#Stage .answers button {
+  margin: 5px;
+  width: 160px;
+  height: 40px;
+}

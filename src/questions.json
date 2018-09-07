@@ -3,7 +3,7 @@
     "stages": [
       {
         "stageName": "Ica 1 / 3",
-        "stage": [
+        "questions": [
           {
             "question": "What is the Wonder of the World in Cusco?",
             "answers": [
@@ -33,7 +33,7 @@
           },
           {
             "question": "What is the name of the town where Machu Picchu is located?",
-            "answer": [
+            "answers": [
               "Aguas Calientes",
               "Ollantaytambo",
               "Urubamba"
