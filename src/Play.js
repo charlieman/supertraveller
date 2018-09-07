@@ -10,6 +10,7 @@ export default class Play extends Component {
         <Header account={this.props.account}/>
         <ul className="buttonList">
           <li><button onClick={() => this.props.go('city-selection')}>Play Now</button></li>
+          <li><button onClick={() => this.props.go('coupons')}>My Coupons</button></li>
           <li><button onClick={() => this.props.go('ranking')}>My Ranking</button></li>
         </ul>
       </div>

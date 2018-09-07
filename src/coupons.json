@@ -1,0 +1,352 @@
+{
+  "coupons": [
+    {
+      "name": "Cusco",
+      "base": "img/cusco-1-s.png",
+      "quiz": [
+        {
+          "fill": "img/cusco-2a-s.png",
+          "coords": [
+            6,
+            9
+          ],
+          "height": 90
+        },
+        {
+          "fill": "img/cusco-2b-s.png",
+          "coords": [
+            88,
+            5
+          ],
+          "height": 93
+        },
+        {
+          "fill": "img/cusco-2c-s.png",
+          "coords": [
+            169,
+            7
+          ],
+          "height": 119
+        }
+      ],
+      "share": [
+        {
+          "fill": "img/cusco-2d-s.png",
+          "coords": [
+            5,
+            64
+          ],
+          "height": 118
+        },
+        {
+          "fill": "img/cusco-2e-s.png",
+          "coords": [
+            61,
+            83
+          ],
+          "height": 96
+        }
+      ],
+      "trip": [
+        {
+          "fill": "img/cusco-2f-s.png",
+          "coords": [
+            141,
+            85
+          ],
+          "height": 94
+        }
+      ]
+    },
+    {
+      "name": "Arequipa",
+      "base": "img/cusco-1-s.png",
+      "quiz": [
+        {
+          "fill": "img/cusco-2a-s.png",
+          "coords": [
+            6,
+            9
+          ],
+          "height": 90
+        },
+        {
+          "fill": "img/cusco-2b-s.png",
+          "coords": [
+            88,
+            5
+          ],
+          "height": 93
+        },
+        {
+          "fill": "img/cusco-2c-s.png",
+          "coords": [
+            169,
+            7
+          ],
+          "height": 119
+        }
+      ],
+      "share": [
+        {
+          "fill": "img/cusco-2d-s.png",
+          "coords": [
+            5,
+            64
+          ],
+          "height": 118
+        },
+        {
+          "fill": "img/cusco-2e-s.png",
+          "coords": [
+            61,
+            83
+          ],
+          "height": 96
+        }
+      ],
+      "trip": [
+        {
+          "fill": "img/cusco-2f-s.png",
+          "coords": [
+            141,
+            85
+          ],
+          "height": 94
+        }
+      ]
+    },
+    {
+      "name": "Ica",
+      "base": "img/cusco-1-s.png",
+      "quiz": [
+        {
+          "fill": "img/cusco-2a-s.png",
+          "coords": [
+            6,
+            9
+          ],
+          "height": 90
+        },
+        {
+          "fill": "img/cusco-2b-s.png",
+          "coords": [
+            88,
+            5
+          ],
+          "height": 93
+        },
+        {
+          "fill": "img/cusco-2c-s.png",
+          "coords": [
+            169,
+            7
+          ],
+          "height": 119
+        }
+      ],
+      "share": [
+        {
+          "fill": "img/cusco-2d-s.png",
+          "coords": [
+            5,
+            64
+          ],
+          "height": 118
+        },
+        {
+          "fill": "img/cusco-2e-s.png",
+          "coords": [
+            61,
+            83
+          ],
+          "height": 96
+        }
+      ],
+      "trip": [
+        {
+          "fill": "img/cusco-2f-s.png",
+          "coords": [
+            141,
+            85
+          ],
+          "height": 94
+        }
+      ]
+    },
+    {
+      "name": "Trujillo",
+      "base": "img/cusco-1-s.png",
+      "quiz": [
+        {
+          "fill": "img/cusco-2a-s.png",
+          "coords": [
+            6,
+            9
+          ],
+          "height": 90
+        },
+        {
+          "fill": "img/cusco-2b-s.png",
+          "coords": [
+            88,
+            5
+          ],
+          "height": 93
+        },
+        {
+          "fill": "img/cusco-2c-s.png",
+          "coords": [
+            169,
+            7
+          ],
+          "height": 119
+        }
+      ],
+      "share": [
+        {
+          "fill": "img/cusco-2d-s.png",
+          "coords": [
+            5,
+            64
+          ],
+          "height": 118
+        },
+        {
+          "fill": "img/cusco-2e-s.png",
+          "coords": [
+            61,
+            83
+          ],
+          "height": 96
+        }
+      ],
+      "trip": [
+        {
+          "fill": "img/cusco-2f-s.png",
+          "coords": [
+            141,
+            85
+          ],
+          "height": 94
+        }
+      ]
+    },
+    {
+      "name": "Huaraz",
+      "base": "img/cusco-1-s.png",
+      "quiz": [
+        {
+          "fill": "img/cusco-2a-s.png",
+          "coords": [
+            6,
+            9
+          ],
+          "height": 90
+        },
+        {
+          "fill": "img/cusco-2b-s.png",
+          "coords": [
+            88,
+            5
+          ],
+          "height": 93
+        },
+        {
+          "fill": "img/cusco-2c-s.png",
+          "coords": [
+            169,
+            7
+          ],
+          "height": 119
+        }
+      ],
+      "share": [
+        {
+          "fill": "img/cusco-2d-s.png",
+          "coords": [
+            5,
+            64
+          ],
+          "height": 118
+        },
+        {
+          "fill": "img/cusco-2e-s.png",
+          "coords": [
+            61,
+            83
+          ],
+          "height": 96
+        }
+      ],
+      "trip": [
+        {
+          "fill": "img/cusco-2f-s.png",
+          "coords": [
+            141,
+            85
+          ],
+          "height": 94
+        }
+      ]
+    },
+    {
+      "name": "Tarapoto",
+      "base": "img/cusco-1-s.png",
+      "quiz": [
+        {
+          "fill": "img/cusco-2a-s.png",
+          "coords": [
+            6,
+            9
+          ],
+          "height": 90
+        },
+        {
+          "fill": "img/cusco-2b-s.png",
+          "coords": [
+            88,
+            5
+          ],
+          "height": 93
+        },
+        {
+          "fill": "img/cusco-2c-s.png",
+          "coords": [
+            169,
+            7
+          ],
+          "height": 119
+        }
+      ],
+      "share": [
+        {
+          "fill": "img/cusco-2d-s.png",
+          "coords": [
+            5,
+            64
+          ],
+          "height": 118
+        },
+        {
+          "fill": "img/cusco-2e-s.png",
+          "coords": [
+            61,
+            83
+          ],
+          "height": 96
+        }
+      ],
+      "trip": [
+        {
+          "fill": "img/cusco-2f-s.png",
+          "coords": [
+            141,
+            85
+          ],
+          "height": 94
+        }
+      ]
+    }
+  ]
+}

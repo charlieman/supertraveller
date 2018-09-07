@@ -7,6 +7,8 @@ import Play from './Play';
 import CitySelector from "./CitySelector";
 import Stage from "./Stage";
 import questions from './questions.json';
+import Coupons from "./Coupons";
+import couponData from './coupons.json';
 
 class App extends Component {
   constructor(props) {
@@ -24,23 +26,24 @@ class App extends Component {
         },
         puzzles: {
           Cusco: {
-            quiz: [false, false, false],
-            share: [false, false],
-            trip: false,
+            quiz: [true, false, false],
+            share: [true, true],
+            trip: [true],
           },
           Arequipa: {
             quiz: [false, false, false],
             share: [true, false],
-            trip: false,
+            trip: [false],
           },
           Ica: {
             quiz: [false, false, false],
-            share: [false, false],
-            trip: false,
+            share: [false, true],
+            trip: [true],
           },
         }
       },
       questions: questions,
+      coupons: couponData.coupons,
       settings: {
         numberOfWins: 2, // questions asked per stage
         cooldown: 120, // how much time to wait before coupon is available again in hours
@@ -152,6 +155,8 @@ class App extends Component {
         return (<div>help</div>);
       case 'city-selection':
         return (<CitySelector account={this.state.account} play={this.play}/>);
+      case 'coupons':
+        return (<Coupons account={this.state.account} coupons={this.state.coupons}/>);
       case 'stage':
         const city = this.state.selectedCity;
         const quiz = this.state.questions[city];

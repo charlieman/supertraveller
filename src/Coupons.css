@@ -1,0 +1,21 @@
+#Coupons #canvas {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#Coupons #canvas .base {
+  align-self: stretch;
+  min-height: 210px;
+  position: relative;
+  margin-left: 20px;
+}
+
+#Coupons #canvas .base img {
+  position: absolute;
+}
+
+#Coupons #canvas .base p {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+}
