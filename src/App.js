@@ -9,6 +9,7 @@ import Stage from "./Stage";
 import questions from './questions.json';
 import Coupons from "./Coupons";
 import couponData from './coupons.json';
+import WonPiece from "./WonPiece";
 
 class App extends Component {
   constructor(props) {
@@ -63,7 +64,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.play('Cusco');
+    //this.play('Cusco');
+    //this.go('won-piece');
   }
 
   render() {
@@ -171,7 +173,7 @@ class App extends Component {
                  winPiece={this.winPiece}
           />);
       case 'won-piece':
-        return (<div>Congratulations you won a puzzle piece!</div>);
+        return (<WonPiece account={this.state.account}/>);
       default:
         console.log(viewName);
         return null;
