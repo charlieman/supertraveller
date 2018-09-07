@@ -16,6 +16,7 @@ export default class Stage extends Component {
       points: 0,
       message: null,
     };
+    this.stop = false;
   }
 
   componentDidMount() {
@@ -23,6 +24,10 @@ export default class Stage extends Component {
     this.setState({
       questions,
     });
+  }
+
+  componentWillUnmount() {
+    this.stop = true;
   }
 
   static fisherYatesShuffle(choices) {
@@ -110,6 +115,9 @@ export default class Stage extends Component {
     const next = this.state.current + 1;
     if (next > this.props.settings.numberOfQuestions) {
       throw new Error("Out of Questions error!");
+    }
+    if (this.stop) {
+      return;
     }
     this.setState({current: next, checkingAnswer: false, selected: null, message: null});
   }
