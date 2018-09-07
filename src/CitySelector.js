@@ -36,9 +36,11 @@ export default class CitySelector extends Component {
           <li>{lives > 2 ? CitySelector.alive() : CitySelector.dead()}</li>
         </ul>
         <p className="question">Where do you want to travel?</p>
-        <p className="description" style={{visibility: this.state.showAbout ? 'visible': 'hidden'}}>
-          We are going to show you questions about
-          this city, answer all of them correctly to gain points</p>
+        <p className="description" style={{visibility: this.state.showAbout ? 'visible' : 'hidden'}}>
+          Next you are going to solve some questions about {this.state.city}. You have 10 seconds to answer each
+          question.<br/>
+          Go!
+        </p>
         <div className="cities">
           {this.button('Ica')}
           {this.button('Trujillo')}
@@ -47,7 +49,9 @@ export default class CitySelector extends Component {
           {this.button('Cusco')}
           {this.button('Tarapoto')}
         </div>
-        {this.state.city !== null ? <button className="playButton">Play Now</button> : ''}
+        <div className="playArea">
+          {this.state.city !== null ? <button className="playButton">Play Now</button> : ''}
+        </div>
       </div>
     );
   }

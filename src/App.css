@@ -1,0 +1,12 @@
+#App {
+  display: grid;
+  grid-template-rows: auto 50px;
+  grid-template-areas: "main" "footer";
+  min-height: 100vh;
+}
+
+#App .view {
+  grid-column-start: auto;
+  overflow: scroll;
+  max-height: 100%;
+}

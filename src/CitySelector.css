@@ -1,6 +1,3 @@
-#CitySelector {
-  text-align: center;
-}
 #CitySelector li {
   list-style: none;
   display: inline-block;
@@ -11,8 +8,13 @@
   padding: 0;
 }
 
+#CitySelector p {
+  text-align: center;
+}
+
 #CitySelector .question {
-  padding: 20px;
+  padding: 0;
+  margin: 15px 0 5px;
   text-align: center;
   font-size: 2em;
 }
@@ -21,7 +23,7 @@
   display: block;
   border: 1px solid #343434;
   border-radius: 15px;
-  margin: 20px;
+  margin: 10px 20px;
   padding: 20px;
 }
 
@@ -42,6 +44,10 @@
 
 #CitySelector .cities button.selected {
   background: red;
+}
+
+#CitySelector .playArea {
+  text-align: center;
 }
 
 #CitySelector .playButton {
