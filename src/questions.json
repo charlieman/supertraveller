@@ -2,7 +2,8 @@
   "Cusco": {
     "stages": [
       {
-        "stageName": "Ica 1 / 3",
+        "stageName": "Cusco 1 / 3",
+        "experience": 20,
         "questions": [
           {
             "question": "What is the Wonder of the World in Cusco?",
@@ -43,8 +44,9 @@
         ]
       },
       {
-        "stageName": "Ica 2 / 3",
-        "stage": [
+        "stageName": "Cusco 2 / 3",
+        "experience": 30,
+        "questions": [
           {
             "question": "Which is the biggest mountain in Cusco?",
             "answers": [
@@ -84,8 +86,9 @@
         ]
       },
       {
-        "stageName": "Ica 3 / 3",
-        "stage": [
+        "stageName": "Cusco 3 / 3",
+        "experience": 50,
+        "questions": [
           {
             "question": "What is the real name of the Rainbow Mountain?",
             "answers": [

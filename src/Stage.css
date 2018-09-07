@@ -1,13 +1,29 @@
-#Stage {
+#Stage .playArea {
   padding: 0 20px;
 }
 
-#Stage h1 {
+#Stage .playArea h1 {
   text-align: center;
 }
 
-#Stage .answers button {
+#Stage .playArea .answers button {
   margin: 5px;
   width: 160px;
   height: 40px;
+}
+
+#Stage .playArea .answers button.correct {
+  background: forestgreen;
+}
+
+#Stage .playArea .answers button.failed {
+  background: darkred;
+}
+
+#Stage .playArea .answers button.selected {
+  background: forestgreen;
+}
+
+#Stage .playArea .answers button.correct.selected {
+  border: 5px solid yellow;
 }

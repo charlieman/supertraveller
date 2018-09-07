@@ -20,21 +20,47 @@ class App extends Component {
         lives: 2,
         experience: 0,
         stages: {
-          Cusco: {stage: 0}
+          Cusco: {stage: 1},
         },
+        puzzles: {
+          Cusco: {
+            quiz: [true, false, false],
+            share: [false, false],
+            trip: false,
+          },
+          Arequipa: {
+            quiz: [false, false, false],
+            share: [true, false],
+            trip: false,
+          },
+          Ica: {
+            quiz: [false, false, false],
+            share: [false, false],
+            trip: false,
+          },
+        }
       },
       questions: questions,
       settings: {
-        numberOfQuestions: 2, // questions asked per stage
+        numberOfWins: 2, // questions asked per stage
         cooldown: 120, // how much time to wait before coupon is available again in hours
         discount: 50, // discount percentage
+        pointsPerQuestion: 9,
       },
+      selectedCity: null,
       selectedStage: null,
     };
 
     this.go = this.go.bind(this);
     this.play = this.play.bind(this);
+    this.addExperience = this.addExperience.bind(this);
+    this.die = this.die.bind(this);
+    this.winPiece = this.winPiece.bind(this);
     window.getState = () => this.state;
+  }
+
+  componentDidMount() {
+    this.play('Cusco');
   }
 
   render() {
@@ -57,17 +83,62 @@ class App extends Component {
     const quiz = this.state.questions[city];
     let userStage = this.state.account.stages[city];
     if (quiz === undefined) {
-      return null
+      return null;
     }
     if (userStage === undefined) {
       userStage = {stage: 0};
     }
-    return quiz.stages[userStage.stage];
+    return userStage.stage;
   }
 
   play(city) {
+    if (this.state.account.lives <= 0) {
+      alert('Try again tomorrow');
+      this.setState({selectedCity: null, selectedStage: null, view: 'city-selection'});
+      return;
+    }
     const selectedStage = this.selectStage(city);
-    this.setState({selectedStage, view: 'stage'});
+    this.setState({selectedCity: city, selectedStage, view: 'stage'});
+  }
+
+  addExperience(points) {
+    console.log('addExperience', points);
+    const account = {
+      ...this.state.account,
+      experience: this.state.account.experience + points
+    };
+    this.setState({account});
+  }
+
+  winPiece() {
+    const stage = this.state.selectedStage;
+    const city = this.state.selectedCity;
+    const puzzle = this.state.account.puzzles[city];
+    puzzle.quiz[stage] = true;
+    const account = {
+      ...this.state.account,
+      stages: {
+        ...this.state.account.stages,
+        [city]: stage + 1,
+      },
+      puzzles: {
+        ...this.state.account.puzzles,
+        [city]: puzzle,
+      }
+    };
+    this.setState({account, selectedCity: null, selectedStage: null, view: 'won-piece'});
+  }
+
+  die() {
+    const account = {
+      ...this.state.account,
+      lives: this.state.account.lives - 1
+    };
+    this.setState({account});
+    if (this.state.account.lives <= 0) {
+      alert('Bad luck :(. Try again tomorrow!');
+      this.setState({selectedCity: null, selectedStage: null, view: 'city-selection'});
+    }
   }
 
   getView(viewName) {
@@ -85,8 +156,20 @@ class App extends Component {
       case 'city-selection':
         return (<CitySelector account={this.state.account} play={this.play}/>);
       case 'stage':
+        const city = this.state.selectedCity;
+        const quiz = this.state.questions[city];
+        const stageData = quiz.stages[this.state.selectedStage];
+        console.log(stageData);
         return (
-          <Stage data={this.state.selectedStage} account={this.state.account} settings={this.state.settings}/>);
+          <Stage data={stageData}
+                 account={this.state.account}
+                 settings={this.state.settings}
+                 addExperience={this.addExperience}
+                 die={this.die}
+                 winPiece={this.winPiece}
+          />);
+      case 'won-piece':
+        return (<div>Congratulations you won a puzzle piece!</div>);
       default:
         console.log(viewName);
         return null;
