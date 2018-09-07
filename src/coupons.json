@@ -3,6 +3,7 @@
     {
       "name": "Cusco",
       "base": "img/cusco-1-s.png",
+      "discount": "50%",
       "quiz": [
         {
           "fill": "img/cusco-2a-s.png",
@@ -61,6 +62,7 @@
     {
       "name": "Arequipa",
       "base": "img/cusco-1-s.png",
+      "discount": "50%",
       "quiz": [
         {
           "fill": "img/cusco-2a-s.png",
@@ -119,6 +121,7 @@
     {
       "name": "Ica",
       "base": "img/cusco-1-s.png",
+      "discount": "50%",
       "quiz": [
         {
           "fill": "img/cusco-2a-s.png",
@@ -177,6 +180,7 @@
     {
       "name": "Trujillo",
       "base": "img/cusco-1-s.png",
+      "discount": "50%",
       "quiz": [
         {
           "fill": "img/cusco-2a-s.png",
@@ -235,6 +239,7 @@
     {
       "name": "Huaraz",
       "base": "img/cusco-1-s.png",
+      "discount": "50%",
       "quiz": [
         {
           "fill": "img/cusco-2a-s.png",
@@ -293,6 +298,7 @@
     {
       "name": "Tarapoto",
       "base": "img/cusco-1-s.png",
+      "discount": "50%",
       "quiz": [
         {
           "fill": "img/cusco-2a-s.png",

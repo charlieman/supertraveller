@@ -36,6 +36,7 @@ export default class Coupons extends Component {
           const style = {left: `${piece.coords[0]}px`, top: `${piece.coords[1]}px`};
           return (<img key={piece.fill} src={piece.fill} alt="piece" height={piece.height} style={style}/>);
         })}
+        <span className="discount">{coupon.discount}</span>
       </div>
     );
   }
