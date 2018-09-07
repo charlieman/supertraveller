@@ -50,9 +50,9 @@
           {
             "question": "Which is the biggest mountain in Cusco?",
             "answers": [
-              "huayna picchu",
+              "Huayna Picchu",
               "Ausangate",
-              "Montaña de 7 colores"
+              "Rainbow mountain"
             ],
             "correct": 1
           },
@@ -70,7 +70,7 @@
             "answers": [
               "12 angles",
               "11 angles",
-              "10 angles"
+              "14 angles"
             ],
             "correct": 0
           },
