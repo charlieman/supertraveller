@@ -92,21 +92,19 @@ export default class Stage extends Component {
     if (win) {
       points += 1;
       this.setState({message: "You made it!", points});
-    } else {
-      this.setState({message: "Too bad, try again!"})
-    }
 
-    await this.sleep(2000);
-    if (win) {
       if (points >= this.props.settings.numberOfWins) {
         this.props.addExperience(this.props.data.experience);
         this.props.winPiece();
         return;
       }
     } else {
-      if (this.props.account.lives > 0) {
-        this.props.die();
-      }
+      this.setState({message: "Too bad, try again!"})
+    }
+
+    await this.sleep(2000);
+    if (!win && this.props.account.lives > 0) {
+      this.props.die();
     }
     const next = this.state.current + 1;
     if (next > this.props.settings.numberOfQuestions) {
