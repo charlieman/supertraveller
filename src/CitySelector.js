@@ -50,7 +50,10 @@ export default class CitySelector extends Component {
           {this.button('Tarapoto')}
         </div>
         <div className="playArea">
-          {this.state.city !== null ? <button className="playButton">Play Now</button> : ''}
+          {this.state.city !== null ? <button className="playButton" onClick={() => this.props.play(this.state.city)}>
+            Play Now<br/>
+            <small>Stage 1 / 3</small>
+          </button> : ''}
         </div>
       </div>
     );

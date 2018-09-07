@@ -52,6 +52,10 @@
 
 #CitySelector .playButton {
   font-size: 1.6em;
-  padding: 15px;
+  padding: 5px 20px;
   margin: 20px;
+}
+
+#CitySelector .playButton small {
+  font-size: 0.5em;
 }

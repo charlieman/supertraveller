@@ -7,6 +7,6 @@
 
 #App .view {
   grid-column-start: auto;
-  overflow: scroll;
+  overflow: auto;
   max-height: 100%;
 }

@@ -21,6 +21,7 @@ class App extends Component {
     };
 
     this.go = this.go.bind(this);
+    this.play = this.play.bind(this);
   }
 
   render() {
@@ -39,6 +40,10 @@ class App extends Component {
     this.setState({view});
   }
 
+  play(city) {
+    console.log(arguments);
+  }
+
   getView(viewName) {
     switch (viewName) {
       case 'home':
@@ -52,7 +57,7 @@ class App extends Component {
       case 'help':
         return (<div>help</div>);
       case 'city-selection':
-        return (<CitySelector account={this.state.account} />);
+        return (<CitySelector account={this.state.account} play={this.play} />);
       default:
         console.log(viewName);
         return null;
