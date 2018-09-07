@@ -35,7 +35,7 @@ export default class CitySelector extends Component {
           <li>{lives > 1 ? CitySelector.alive() : CitySelector.dead()}</li>
           <li>{lives > 2 ? CitySelector.alive() : CitySelector.dead()}</li>
         </ul>
-        <p className="question">Where do you want to travel?</p>
+        <p className="question">How much do you know about Peru? Play and win!</p>
         <p className="description" style={{visibility: this.state.showAbout ? 'visible' : 'hidden'}}>
           Next you are going to solve some questions about {this.state.city}. You have 10 seconds to answer each
           question.<br/>
