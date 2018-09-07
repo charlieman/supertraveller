@@ -20,7 +20,7 @@ class App extends Component {
         lives: 2,
         experience: 0,
         stages: {
-          Ica: {stage: 0}
+          Cusco: {stage: 0}
         },
       },
       questions: questions,
