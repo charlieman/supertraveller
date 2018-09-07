@@ -5,6 +5,8 @@ import Home from './Home';
 import Account from './Account';
 import Play from './Play';
 import CitySelector from "./CitySelector";
+import Stage from "./Stage";
+import questions from './questions.json';
 
 class App extends Component {
   constructor(props) {
@@ -17,11 +19,19 @@ class App extends Component {
         progress: 70,
         lives: 2,
         experience: 0,
+        stages: {
+          ica: {stage: 0}
+        },
       },
+      stages: questions,
+      settings: {
+        questions: 2,
+      }
     };
 
     this.go = this.go.bind(this);
     this.play = this.play.bind(this);
+    window.s = this.state;
   }
 
   render() {
@@ -42,6 +52,8 @@ class App extends Component {
 
   play(city) {
     console.log(arguments);
+    const stage = this.state.stages[city];
+    return <Stage stage={stage} account={this.state.account}/>;
   }
 
   getView(viewName) {
@@ -57,7 +69,7 @@ class App extends Component {
       case 'help':
         return (<div>help</div>);
       case 'city-selection':
-        return (<CitySelector account={this.state.account} play={this.play} />);
+        return (<CitySelector account={this.state.account} play={this.play}/>);
       default:
         console.log(viewName);
         return null;

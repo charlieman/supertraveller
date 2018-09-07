@@ -1,0 +1,126 @@
+{
+  "ica": {
+    "stages": [
+      {
+        "questions": [
+          {
+            "question": "What is the Wonder of the World in Cusco?",
+            "answers": [
+              "Machu Picchu",
+              "Choquequirao",
+              "Ollantaytambo"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "What kind of drink helps travelers to avoid altitude sickness?",
+            "answers": [
+              "Mate de Coca",
+              "Chicha de Jora",
+              "Masato"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "Where is the Inti Raymi (Festival of the Sun) performed every year?",
+            "answers": [
+              "Saccashuaman",
+              "Pisac",
+              "Machu Picchu"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "What is the name of the town where Machu Picchu is located?",
+            "answer": [
+              "Aguas Calientes",
+              "Ollantaytambo",
+              "Urubamba"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "questions": [
+          {
+            "question": "Which is the biggest mountain in Cusco?",
+            "answers": [
+              "huayna picchu",
+              "Ausangate",
+              "Montaña de 7 colores"
+            ],
+            "correct": 1
+          },
+          {
+            "question": "What is the name of the ruins shaped like a circle in Cusco?",
+            "answers": [
+              "Moray",
+              "Maras",
+              "Pisac"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "How many angles does the most famous stone of Cusco have?",
+            "answers": [
+              "12 angles",
+              "11 angles",
+              "10 angles"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "How is the artisan's neighborhood called?",
+            "answers": [
+              "San Blas",
+              "Pucamarka",
+              "Colcampata"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "questions": [
+          {
+            "question": "What is the real name of the Rainbow Mountain?",
+            "answers": [
+              "Vinicunca",
+              "Palccoyo",
+              "Huayna Picchu"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "What is the name of the cathedral of Cusco?",
+            "answers": [
+              "Virgen de la Asunción",
+              "Santo Domingo",
+              "Compañía de Jesús"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "What is the name of the sun clock of the Incas?",
+            "answers": [
+              "Intihuatana",
+              "Inti Punku",
+              "Sacred Rock"
+            ],
+            "correct": 0
+          },
+          {
+            "question": "What is the name of the lagoon that descends from the Salcantay mountain?",
+            "answers": [
+              "Humantay",
+              "Pomacanchi",
+              "Yanacocha"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    ]
+  }
+}
